@@ -11,19 +11,26 @@
 		body {
 			background-color: #00FFFF
 		}
+		h1 {
+			text-align: center;
+			font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+		}
 		p {
 			font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 			font-size: 15px;
-			text-align: center;
+			text-align: left;
 		}
 		h4 {
+			text-align: center;
+		}
+		h5 {
 			text-align: center;
 		}
 	</style>
 	<body>
 		<div class="title">
 			<h1>Difference between MP4 H.264 & MP4 H.265</h1>
-			<h3>October 26, 2018</h3>
+			<h3 id="date"></h3>
 		</div>
 	</body>
 	<video width="45%" controls>
@@ -34,20 +41,45 @@
 	</video>
 	<body>
 		<div>
+			<h2>Format Overview</h2>
 			<p>	There are 2 different types of MP4 formats, MP4(H.264) and MP4(H.265). Here we have H.264 on the left and H.265 on the right. As you can see, the H.265 file,
 			cannot be displayed on this website, but the audio is present. This is becasue the computer has not made the format H.265 compatible with most websites. The H.264
 			format is compatible, and common in most devices. However, it is not the most efficient way to broadcast a video. It takes up twice the file size of H.265. H.265 
 			is a smaller size, has a higher video quality, and uses a lower bit rate. This is due to the different ways the computer stores the pixels' colors. H.264 stores 
-			colors that transition to the next part, and compress the colors that stay the same. H.265 uses a more efficient method by compressing certain parts into a smaller 
-			file size. The problem is the computers cannot load the H.265 format quick enough to use. Computers that CAN use H.265 prefer the format for streaming on things like Netflix 
-			or YouTube, but for smaller size videos like these, they would load too slow to watch. Modern software companies are attempting to create more common computers like 
-			a smartphone to have the compatiblity to use H.265. Compressing videos over and over again to save storage space in the H.264 format would cause the quality of the 
-			video to go down and get blurrier each time. H.265, makes the compression better for the viewer.</p>
-		</div>
-		<h4><img src="website/images/H264vsH265.png" alt="H264vsH265.png" width="35%"></h4>
-		<div>
-			<p>
-				Image supplied by <a href="https://www.quora.com/How-is-H-265-so-much-more-efficient-than-H-264" target="_blank">Quora.com</a>.</p>
+			colors that transition to the next part, and compress the colors that stay the same.</p>
+			<h4><img src="website/images/H264vsH265.png" alt="H264vsH265.png" width="35%"></h4>
+			<h5>Image supplied by <a href="https://www.quora.com/How-is-H-265-so-much-more-efficient-than-H-264" target="_blank">Quora.com</a>.</h5>
+			<h2>Format History</h2>
+			<p> In May of 2003, The Joint Video Team (or JVT), developed H.264 for the first time. It first comprised of saving storage space by compressing the likeness of frames in videos.
+			This was widely accepted and is still used today in most devices. However, the more a file is compressed in this format, it loses quality, so the JVT began processing 
+			the idea of H.265, which could compress and not reduce as much quality. It did bring up compatibility problems.</p>
+			<h2>Compression</h2>
+			<p>H.265 uses a more efficient method by compressing certain parts into a smaller file size. The problem is the computers cannot load the H.265 format quick enough 
+			to use. Computers that CAN use H.265 prefer the format for streaming on things like Netflix or YouTube, but for smaller size videos like these, they would load too
+			slow to watch. Modern software companies are attempting to create more common computers like a smartphone to have the compatiblity to use H.265. Compressing videos 
+			over and over again to save storage space in the H.264 format would cause the quality of the video to go down and get blurrier each time. H.265, makes the compression 
+			better for the viewer.</p>
+			<h2>Advantages and Disadvantages</h2>
+			<p>As stated earlier, the H.264 has the widest range of use. It does compress videos better than most formats, but it does result in a lack of quality. The H.265 is the
+			best available format due to the complex compression method, but can take long to process and is not compatible with most modern devices. The H.264 is better for a quick
+			video, for smaller screens. Larger screens show the loss of quality more. H.265 is better for a movie that you could stream on Netfilx and watch on a higher def screen.</p>
+			<h2>Sources:</h2>
+			<p>https://en.wikipedia.org/wiki/H.264/MPEG-4_AVC
+			https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding
+			https://www.cnet.com/news/what-is-hevc-high-efficiency-video-coding-h-265-and-4k-compression-explained/
+			www.x265.org
+			https://www.divx.com/en/software/technologies/hevc
+			https://www.cnet.com/news/what-is-hevc-high-efficiency-video-coding-h-265-and-4k-compression-explained/
+			https://www.encoding.com/h-264/
+			https://www.divx.com/en/software/technologies/h264#</p>
 		</div>
 	</body>
+	<script>
+		var d = new Date();  //setup a date object 
+		var month = d.getMonth()+1;  // get the month from the date object
+		var year = d.getFullYear(); //get the full year from the date object
+		var date = d.getDate();
+		var display = "" + month + "/" + date + "/" + year;
+		document.getElementById("date").innerHTML = display;
+	</script>
 </html>
